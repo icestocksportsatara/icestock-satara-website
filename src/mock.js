@@ -1,5 +1,9 @@
 // Mock data for Icestock Sport Association of Satara
 
+// Helper: prefix image paths with PUBLIC_URL so they work correctly
+// when the site is hosted in a subfolder (e.g. GitHub Pages project site).
+const asset = (path) => `${process.env.PUBLIC_URL || ""}${path}`;
+
 export const siteInfo = {
   name: "Icestock Sport Association of Satara",
   shortName: "ISSA Satara",
@@ -12,18 +16,18 @@ export const siteInfo = {
   email: "icestocksportsatara@gmail.com",
   instagram:
     "https://www.instagram.com/sataraicestocksport?igsh=MTA3MzY1dTkzeDdhNQ%3D%3D&utm_source=qr",
-  logo: "/images/logo.jpg",
+  logo: asset("/images/logo.jpg"),
 };
 
 // Local image library (files in frontend/public/images/)
 export const media = {
-  hero: "/images/hero-india-jersey.jpg",
-  presidentArena: "/images/president-arena.jpg",
-  iceRink: "/images/ice-rink.jpg",
-  teamGroup: "/images/team-group.jpg",
-  medalWinners: "/images/medal-winners.jpg",
-  sahilPortrait: "/images/sahil-portrait.jpg",
-  maheshPortrait: "/images/mahesh-portrait.jpg",
+  hero: asset("/images/hero-india-jersey.jpg"),
+  presidentArena: asset("/images/president-arena.jpg"),
+  iceRink: asset("/images/ice-rink.jpg"),
+  teamGroup: asset("/images/team-group.jpg"),
+  medalWinners: asset("/images/medal-winners.jpg"),
+  sahilPortrait: asset("/images/sahil-portrait.jpg"),
+  maheshPortrait: asset("/images/mahesh-portrait.jpg"),
 };
 
 export const leadership = [
@@ -33,7 +37,7 @@ export const leadership = [
     title: "President",
     org: "Icestock Sport Association of Satara",
     scope: "Satara District",
-    photo: "/images/sahil-portrait.jpg",
+    photo: asset("/images/sahil-portrait.jpg"),
     photoPosition: "object-top",
     accent: "#2e8bc0",
   },
@@ -43,7 +47,7 @@ export const leadership = [
     title: "President",
     org: "Maharashtra Icestock Sport Association",
     scope: "Maharashtra State",
-    photo: "/images/mahesh-portrait.jpg",
+    photo: asset("/images/mahesh-portrait.jpg"),
     photoPosition: "object-center",
     accent: "#e79a3b",
   },
